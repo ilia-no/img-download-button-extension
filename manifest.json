@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Media Downloader",
+  "version": "1.0",
+  "description": "Добавляет кнопку загрузки к изображениям и видео на сайте.",
+  "permissions": ["downloads", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icons/download.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+  {
+    "resources": ["icons/download.svg"],
+    "matches": ["<all_urls>"]
+  }
+]
+}

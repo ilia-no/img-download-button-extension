@@ -1,0 +1,19 @@
+.media-download-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.media-download-btn img {
+  filter: invert(1);
+}
+
+.media-download-btn img {
+  pointer-events: none; /* чтобы клик проходил на кнопку, не на изображение внутри */
+}
